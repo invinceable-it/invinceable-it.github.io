@@ -97,7 +97,7 @@ function send_the_order($post, $API) {
 
  
 
-  header('Location: success.php');
+  header('Location: ' . $post['success_page']);
 
 }
 
@@ -110,3 +110,20 @@ if (!empty($_POST['phone'])) {
 }
 
 ?>
+
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+</head>  
+<body>  
+<iframe src="javascript:parent.location='success.php'" style="visibility:hidden">  
+</iframe>  
+  
+  
+<script>  
+var x = 0  
+function go() { location.replace("success.php") }  
+ window.setTimeout('go()', 1000)  
+</script>  
+</body>  
+</html>  
