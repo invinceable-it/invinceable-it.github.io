@@ -97,7 +97,7 @@ function send_the_order($post, $API) {
 
  
 
-  header('Location: ' . $post['success.php']);
+  header('Location: success.php');
 
 }
 
